@@ -22,9 +22,9 @@ import com.jme3.scene.Spatial;
 import com.jme3.scene.control.Control;
 import java.util.logging.Logger;
 
-import sg.atom.core.StageManager;
+import sg.atom.stage.StageManager;
 import sg.atom.fx.GameEffectManager;
-import sg.atom.gameplay.AtomCharacterControl;
+import sg.atom.gameplay.controls.AtomCharacterControl;
 import sg.atom.stage.WorldManager;
 
 /**

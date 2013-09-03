@@ -4,7 +4,6 @@
  */
 package rpgTest.gameplay.rpg;
 
-import rpgTest.gameplay.rpg.control.RPGCharacterControl;
 import com.jme3.input.KeyInput;
 import com.jme3.input.MouseInput;
 import com.jme3.input.controls.ActionListener;
@@ -17,14 +16,15 @@ import com.jme3.renderer.queue.RenderQueue.ShadowMode;
 import com.jme3.scene.Node;
 import com.jme3.scene.Spatial;
 import java.util.ArrayList;
-import sg.atom.ai.steering.DefaultVehicle;
-import sg.atom.ai.steering.SteerManager;
-import sg.atom.ai.steering.control.PersuitSeparationControl;
-import sg.atom.ai.steering.control.SimpleVehicleControl;
+import rpgTest.gameplay.rpg.control.RPGCharacterControl;
+import sg.atom.ai.movement.steering.common.DefaultVehicle;
+import sg.atom.ai.movement.steering.common.SteerManager;
+import sg.atom.ai.movement.steering.control.PersuitSeparationControl;
+import sg.atom.ai.movement.steering.control.SimpleVehicleControl;
 import sg.atom.core.AtomMain;
 import sg.atom.gameplay.GameLevel;
 import sg.atom.gameplay.player.Player;
-import sg.atom.stage.GamePlayManager;
+import sg.atom.gameplay.GamePlayManager;
 
 /**
  *
@@ -37,7 +37,7 @@ public class RPGGamePlayManager extends GamePlayManager {
     Node playerModelFile;
     Node magicFX;
     protected boolean firstPersonView = true;
-    RPGCharacterControl characterControl;
+    protected RPGCharacterControl characterControl;
     private SteerManager steerManager;
     private DefaultVehicle mainPlayerVehicle;
     private ArrayList<DefaultVehicle> demonVehicles;
@@ -122,11 +122,11 @@ public class RPGGamePlayManager extends GamePlayManager {
     @Override
     public void startLevel(GameLevel level) {
         Vector3f startPos = currentLevel.getStartPos();
-        currentLevel.getLevelNode().attachChild(mainPlayer.getPlayerModel());
+        currentLevel.getLevelNode().attachChild(mainPlayer.getPlayerMainCharacter().getPlayerModel());
         //mainPlayer.getPlayerModel().setLocalScale(0.04f);
         //mainPlayer.getPlayerModel().setLocalTranslation(0, -0.8f, 0);
         currentLevel.getStartPos().set(10f, 10, 10f);
-        mainPlayer.getCharacterControl().setLocation(new Vector3f(0f, 100f, 0f));
+        mainPlayer.getPlayerMainCharacter().getCharacterControl().setLocation(new Vector3f(0f, 100f, 0f));
         steerManager = new SteerManager(this.stageManager.getApp());
         createRandomDemon();
     }
@@ -165,12 +165,13 @@ public class RPGGamePlayManager extends GamePlayManager {
         //magicFX.setLocalTranslation(0f, 0.4f, 0f);
         characterControl = new RPGCharacterControl(stageManager);
         mainPlayer = new Player(stageManager, "Kreyna");
-        mainPlayer.initPlayer(playerModel, characterControl);
+        mainPlayer.initPlayer();
+        mainPlayer.getPlayerMainCharacter().initCharacter(playerModel, characterControl);
         mainPlayerVehicle = new DefaultVehicle(steerManager);
         SimpleVehicleControl sControl = new SimpleVehicleControl(steerManager);
         sControl.setVehicle(mainPlayerVehicle);
         sControl.setSpatialToVehicle(true);
-        mainPlayer.getModelNode().addControl(sControl);
+        mainPlayer.getPlayerMainCharacter().getModelNode().addControl(sControl);
 
         RPGCamera rpgCam = new RPGCamera(stageManager.getCurrentActiveCamera(), flyCam, playerModel, inputManager);
         rpgCam.setupChaseCamera();

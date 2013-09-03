@@ -7,8 +7,8 @@ package rpgTest;
 import java.util.ArrayList;
 import rpgTest.gameplay.rpg.RPGGamePlayManager;
 import sg.atom.core.AtomMain;
-import sg.atom.core.StageManager;
 import sg.atom.gameplay.GameLevel;
+import sg.atom.stage.StageManager;
 import sg.atom.stage.WorldManager;
 import sg.atom.world.WorldSettings;
 

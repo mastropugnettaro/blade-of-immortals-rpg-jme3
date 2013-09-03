@@ -8,7 +8,7 @@ import de.lessvoid.nifty.Nifty;
 import de.lessvoid.nifty.screen.Screen;
 import de.lessvoid.nifty.screen.ScreenController;
 import java.util.logging.Logger;
-import sg.atom.core.GameGUIManager;
+import sg.atom.ui.GameGUIManager;
 
 /**
  *

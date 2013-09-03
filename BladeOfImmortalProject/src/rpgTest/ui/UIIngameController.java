@@ -7,7 +7,7 @@ package rpgTest.ui;
 import de.lessvoid.nifty.Nifty;
 import de.lessvoid.nifty.screen.Screen;
 import de.lessvoid.nifty.screen.ScreenController;
-import sg.atom.core.GameGUIManager;
+import sg.atom.ui.GameGUIManager;
 
 /**
  *

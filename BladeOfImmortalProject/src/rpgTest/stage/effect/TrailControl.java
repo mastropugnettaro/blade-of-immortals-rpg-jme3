@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package rpgTest.gameplay.rpg;
+package rpgTest.stage.effect;
 
 import com.jme3.animation.SkeletonControl;
 import com.jme3.bullet.collision.PhysicsCollisionEvent;
@@ -20,7 +20,7 @@ import com.jme3.scene.Spatial;
 import com.jme3.scene.control.Control;
 import com.jme3.scene.shape.Sphere;
 import java.io.IOException;
-import sg.atom.core.StageManager;
+import sg.atom.stage.StageManager;
 import sg.atom.stage.WorldManager;
 
 /**

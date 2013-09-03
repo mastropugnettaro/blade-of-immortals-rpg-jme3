@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 import rpgTest.RPGGameGUIManager;
 import rpgTest.RPGMain;
 import rpgTest.RPGStageManager;
-import sg.atom.core.GameGUIManager;
+import sg.atom.ui.GameGUIManager;
 
 /**
  *

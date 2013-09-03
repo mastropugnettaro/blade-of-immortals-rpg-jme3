@@ -7,7 +7,7 @@ package rpgTest;
 import rpgTest.ui.UIHelloWarningController;
 import rpgTest.ui.UIIngameController;
 import rpgTest.ui.UIMainMenuController;
-import sg.atom.core.GameGUIManager;
+import sg.atom.ui.GameGUIManager;
 import sg.atom.ui.common.UILoadingScreenController;
 
 /**

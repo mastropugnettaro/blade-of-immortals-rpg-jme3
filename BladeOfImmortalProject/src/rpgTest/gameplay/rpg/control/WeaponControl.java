@@ -29,9 +29,9 @@ import com.jme3.scene.control.Control;
 import com.jme3.scene.shape.Sphere;
 import com.jme3.scene.shape.Sphere.TextureMode;
 import java.io.IOException;
-import sg.atom.core.StageManager;
+import rpgTest.stage.world.physic.BombControl;
+import sg.atom.stage.StageManager;
 import sg.atom.stage.WorldManager;
-import rpgTest.physic.BombControl;
 
 /**
  *
