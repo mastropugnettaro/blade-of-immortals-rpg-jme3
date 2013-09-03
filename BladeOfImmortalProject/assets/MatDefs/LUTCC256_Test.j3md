@@ -1,0 +1,21 @@
+MaterialDef ColorCorrection {
+ 
+    MaterialParameters {
+        Texture2D Texture
+        Texture2D CCMap
+    }
+ 
+    Technique {
+        VertexShader GLSL100:   Shaders/ColorCorrection/FilterTest.vert
+        FragmentShader GLSL100: Shaders/ColorCorrection/LUTCC256.frag
+ 
+        LightMode SinglePass
+
+        WorldParameters {
+            WorldViewProjectionMatrix
+            Time
+        }
+        Defines {
+            }
+    }
+}

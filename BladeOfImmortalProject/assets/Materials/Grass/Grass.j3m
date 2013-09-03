@@ -1,0 +1,18 @@
+Material My Material : MatDefs/GrassBase.j3md {
+     MaterialParameters {
+        ColorMap : Flip Textures/GrassPlant/grass.png
+        AlphaNoiseMap : Textures/noise.png
+        AlphaThreshold : 0.0
+        NumLights : 1
+        VertexLighting : true
+        Swaying : true
+     }
+    AdditionalRenderState {
+      FaceCull Off
+      Blend PremultAlpha
+      DepthTest On
+      ColorWrite On
+      DepthWrite On
+      AlphaTestFalloff 0.0
+    }
+}

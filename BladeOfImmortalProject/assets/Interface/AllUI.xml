@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty.xsd http://nifty-gui.sourceforge.net/nifty.xsd">
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+
+    
+    <style id="my-listbox-item-style" base="nifty-listbox-item">
+        <effect>
+            <onCustom name="updateScrollpanelPositionToDisplayElement" target="listBoxStatic" oneShot="true" />
+        </effect>
+    </style>
+    
+    <screen id="null" controller="mygame.GameGUIManager">
+    </screen>
+
+    <screen id="ingame" controller="moon.GameGUIManager">
+        <layer id="layer" childLayout="vertical">
+            <panel id="panel_top" childLayout="horizontal">
+                <panel id="top_panel_left" height="60px" width="90%" align="left" valign="top" style="nifty-panel" childLayout="horizontal">
+                    <text id="status_text_01" font="aurulent-sans-16.fnt" color="#ffff" text="Text Me Off" align="center" valign="center" />
+                    <text id="status_text_02" font="aurulent-sans-16.fnt" color="#ffff" text="Text Me Off" align="center" valign="center" />
+                    <text id="status_text_03" font="aurulent-sans-16.fnt" color="#ffff" text="Text Me Off" align="center" valign="center" />
+                    <text id="status_text_04" font="aurulent-sans-16.fnt" color="#ffff" text="Text Me Off" align="center" valign="center" />
+                    <text id="status_text_05" font="aurulent-sans-16.fnt" color="#ffff" text="Text Me Off" align="center" valign="center" />
+                    <text id="status_text_06" font="aurulent-sans-16.fnt" color="#ffff" text="Text Me Off" align="center" valign="center" />
+                    <text id="status_text_07" font="aurulent-sans-16.fnt" color="#ffff" text="Text Me Off" align="center" valign="center" />
+                    <text id="status_text_08" font="aurulent-sans-16.fnt" color="#ffff" text="Text Me Off" align="center" valign="center" />
+                    <text id="status_text_09" font="aurulent-sans-16.fnt" color="#ffff" text="Text Me Off" align="center" valign="center" />
+                    <text id="status_text_00" font="aurulent-sans-16.fnt" color="#ffff" text="Text Me Off" align="center" valign="center" />
+                    <effect>
+                        <onStartScreen name="move" mode="in" direction="top" length="200" startDelay="0" inherit="true"/>
+                        <onEndScreen name="move" mode="out" direction="top" length="200" startDelay="400" inherit="true"/>
+                    </effect>
+                </panel>
+                <panel id="top_panel_right" height="60px" width="10%" align="right" valign="top" style="nifty-panel" childLayout="horizontal">
+                    <text id="status_text_01" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="left" valign="center" />
+                    <effect>
+                        <onStartScreen name="move" mode="in" direction="right" length="200" startDelay="200" inherit="true"/>
+                        <onEndScreen name="move" mode="out" direction="right" length="100" startDelay="200" inherit="true"/>
+                    </effect>
+                </panel>
+            </panel>
+            <panel id="buffer_panel" width="100%" childLayout="center">            
+
+            </panel>
+            <panel id="crosshair_panel" align="center" valign="center" childLayout="vertical">					
+                <effect>
+                    <onStartScreen name="fade" mode="in" length="400" startDelay="200" inherit="true"/>
+                </effect>
+                <text id="crosshair" font="aurulent-sans-16.fnt" color="#fff8" text="-( -+- )-" align="center" valign="center" />
+            </panel>
+            <panel id="panel_bottom" childLayout="horizontal">
+                <panel id="bottom_panel_left" height="120px" width="200px" align="left" valign="bottom" style="nifty-panel" childLayout="vertical">
+                    <text id="status_text_01" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <text id="status_text_02" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <text id="status_text_03" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />	
+                    <effect>
+                        <onStartScreen name="move" mode="in" direction="bottom" length="200" startDelay="400" inherit="true"/>
+                        <onEndScreen name="move" mode="out" direction="bottom" length="200" startDelay="0" inherit="true"/>
+                    </effect>
+                </panel>
+                <panel id="buffer_panel">
+
+                </panel>
+                <panel id="bottom_panel_right" height="250px" width="250px" align="right" valign="bottom" style="nifty-panel" childLayout="vertical">
+                    <text id="status_text_01" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <text id="status_text_02" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <text id="status_text_03" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <text id="status_text_04" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <text id="status_text_05" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <text id="status_text_06" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <text id="status_text_07" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <text id="status_text_08" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <text id="status_text_09" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <text id="status_text_00" font="aurulent-sans-16.fnt" color="#ffff" text="Text" align="center" valign="center" />
+                    <effect>
+                        <onStartScreen name="move" mode="in" direction="bottom" length="400" startDelay="600" inherit="true"/>
+                        <onEndScreen name="move" mode="out" direction="bottom" length="200" startDelay="0" inherit="true"/>
+                    </effect>
+                </panel>
+            </panel>
+        </layer>
+    </screen>
+</nifty>

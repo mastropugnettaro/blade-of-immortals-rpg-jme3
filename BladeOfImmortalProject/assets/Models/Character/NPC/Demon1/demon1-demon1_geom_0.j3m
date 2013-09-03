@@ -1,0 +1,7 @@
+Material MyMaterial : Common/MatDefs/Light/Lighting.j3md {
+    MaterialParameters {
+        DiffuseMap : Flip Models/Character/NPC/Demon1/images/UndeadSynuuthSlaveLeader_diff.tga
+    }
+    AdditionalRenderState {
+    }
+}

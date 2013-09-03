@@ -1,0 +1,22 @@
+
+material Preview
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.592157 0.843137 0.466667 1
+			diffuse 0.592157 0.843137 0.466667 1
+			specular 0.168627 0.0784314 0.00392157 1 42
+
+			texture_unit
+			{
+				texture Market.jpg
+			}
+		}
+
+	}
+
+}
+
+

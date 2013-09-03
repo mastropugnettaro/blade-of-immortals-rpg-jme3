@@ -1,0 +1,17 @@
+Material MyMaterial : Common/MatDefs/Misc/Particle.j3md {
+    MaterialParameters {
+        Texture : Textures/particles/fx_sparkles.png
+        GlowMap : Textures/particles/fx_sparkles.png
+    }
+    AdditionalRenderState {
+      FaceCull Back
+      Wireframe Off
+      DepthWrite On
+      PolyOffset 0.1 0.1
+      AlphaTestFalloff 0.1
+      Blend AlphaAdditive
+      PointSprite Off
+      ColorWrite On
+      DepthTest On
+    }
+}

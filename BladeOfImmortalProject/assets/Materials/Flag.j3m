@@ -1,0 +1,18 @@
+Material Flag1 : MatDefs/FlagWindMatDef.j3md {
+     MaterialParameters {
+        AlphaThreshold : 0.3
+        NumLights : 1
+        VertexLighting : true
+        Swaying : true
+        ColorMap : Textures/Flag/diffuse.png
+        Stiffness : 1.2
+     }
+    AdditionalRenderState {
+      FaceCull Off
+      Blend Alpha
+      DepthTest On
+      ColorWrite On
+      DepthWrite On
+      AlphaTestFalloff 1.0
+    }
+}

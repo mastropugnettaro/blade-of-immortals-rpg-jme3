@@ -1,0 +1,19 @@
+Material MyMaterial : Common/MatDefs/Light/Lighting.j3md {
+    MaterialParameters {
+        DiffuseMap : Flip Models/Character/MainCharacter/textures/dress_diffuse.png
+        AlphaMap : Flip Models/Character/MainCharacter/textures/dress_alpha.png
+        ParallaxHeight : 0.05
+        Shininess : 1.0
+    }
+    AdditionalRenderState {
+      FaceCull Off
+      Wireframe Off
+      DepthWrite On
+      PolyOffset 0.0 0.0
+      AlphaTestFalloff 0.0
+      Blend Alpha
+      PointSprite Off
+      ColorWrite On
+      DepthTest On
+    }
+}

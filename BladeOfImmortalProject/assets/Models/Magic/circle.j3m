@@ -1,0 +1,17 @@
+Material My Material : Common/MatDefs/Misc/Particle.j3md {
+     MaterialParameters {
+        GlowMap : Textures/MagicFX/sparkling1.png
+        Texture : Textures/MagicFX/Formula_Eltria.png
+     }
+    AdditionalRenderState {
+      FaceCull Back
+      Blend AlphaAdditive
+      DepthTest On
+      ColorWrite On
+      DepthWrite On
+      AlphaTestFalloff 0.0
+      Wireframe Off
+      PolyOffset 0.0 0.0
+      PointSprite Off
+    }
+}

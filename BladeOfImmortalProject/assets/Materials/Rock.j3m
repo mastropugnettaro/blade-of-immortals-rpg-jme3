@@ -1,0 +1,22 @@
+Material MyMaterial : Common/MatDefs/Light/Lighting.j3md {
+    MaterialParameters {
+        DiffuseMap : Repeat 3d_objects/environment/textures/stone_felsite/D.png
+        SpecularMap : Repeat 3d_objects/environment/textures/stone_felsite/S.png
+        NormalMap : Repeat 3d_objects/environment/textures/stone_felsite/N.png
+        Shininess : 16.0
+        Minnaert : false
+        VertexLighting : false
+        Diffuse : 1.0 1.0 1.0 0.3
+    }
+    AdditionalRenderState {
+      FaceCull Back
+      Wireframe Off
+      DepthWrite On
+      PolyOffset 0.0 0.0
+      AlphaTestFalloff 0.0
+      Blend Off
+      PointSprite Off
+      ColorWrite On
+      DepthTest On
+    }
+}

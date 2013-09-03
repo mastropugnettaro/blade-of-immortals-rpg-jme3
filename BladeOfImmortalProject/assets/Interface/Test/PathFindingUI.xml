@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  <!-- start screen -->
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+  
+    <screen id="start" controller="mygame.ai.pathfinding.HelloAnimation">
+        <layer id="layer" childLayout="center">
+            <panel id="panel" height="345px" width="140px" align="left" valign="center" backgroundColor="#aaa4" childLayout="vertical" visibleToMouse="true">
+                <effect>
+                    <onStartScreen name="move" mode="in" direction="top" length="300" startDelay="0" inherit="true"/>
+                    <onEndScreen name="move" mode="out" direction="bottom" length="300" startDelay="0" inherit="true"/>
+                </effect>
+                <text id="text" font="aurulent-sans-16.fnt" color="#000f" text="Path Finding demo" align="center" valign="center" />
+                
+                <control id="start_point_button" name="button" label="Start Point" align="center">
+                    <interact onClick="clickStartPoint()"/>
+                    <effect>
+                        <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="1500" startDelay="250"/>
+                    </effect>
+                </control>
+                <control id="end_point_button" name="button" label="End Point" align="center">
+                    <interact onClick="clickFinishPoint()"/>
+                    <effect>
+                        <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="1500" startDelay="250"/>
+                    </effect>
+                </control>
+                <control id="normal_point_button" name="button" label="Normal Point" align="center">
+                    <interact onClick="clickNormalPoint()"/>
+                    <effect>
+                        <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="1500" startDelay="250"/>
+                    </effect>
+                </control>
+                <panel childLayout="vertical">
+                    <control name="label" text="Cost" />
+                    <control id="RadioGroup-1" name="radioButtonGroup" />
+                    <panel id="paneofradio" childLayout="vertical" backgroundColor="#8001" paddingLeft="7px" paddingRight="7px" paddingTop="4px" paddingBottom="4px" width="105px">
+                        <effect>
+                            <onActive name="border" color="#0008" />
+                        </effect>
+                        <panel childLayout="horizontal">
+                            <control name="label" text="Imposible" with="60px" />
+                            <control name="radioButton" id="option-1" group="RadioGroup-1" />
+                        </panel>
+                        <panel childLayout="horizontal">
+                            <control name="label" text="VeryTouch" with="60px" />
+                            <control name="radioButton" id="option-2" group="RadioGroup-1" />
+                        </panel>
+                        <panel childLayout="horizontal">
+                            <control name="label" text="Touch" with="60px" />
+                            <control name="radioButton" id="option-3" group="RadioGroup-1" />
+                        </panel>
+                        <panel childLayout="horizontal">
+                            <control name="label" text="Normal" with="60px" />
+                            <control name="radioButton" id="option-4" group="RadioGroup-1" />
+                        </panel>
+                        <panel childLayout="horizontal">
+                            <control name="label" text="Easy" with="60px" />
+                            <control name="radioButton" id="option-5" group="RadioGroup-1" />
+                        </panel>
+                    </panel>
+                </panel>
+                <control id="go_button" name="button" label="Go" align="center">
+                    <interact onClick="clickGo()"/>
+                    <effect>
+                        <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="1500" startDelay="250"/>
+                    </effect>
+                </control>
+                <control id="clear_button" name="button" label="Clear" align="center">
+                    <interact onClick="clickClear()"/>
+                    <effect>
+                        <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="1500" startDelay="250"/>
+                    </effect>
+                </control>
+
+            </panel>
+        </layer>
+    </screen>
+</nifty>

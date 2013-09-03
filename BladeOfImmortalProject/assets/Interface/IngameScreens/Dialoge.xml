@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  <!-- start screen -->
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+
+    <useStyles filename="Interface/RPGStyle/rpg-default-styles.xml" />
+    <useControls filename="Interface/MyControls/rpg-default-controls.xml" />
+    
+    <screen id="start" controller="jme3test.animation.DialogeController">
+        <layer  id="layer" childLayout="center" padding="2px,2px,2px,2px">
+            <panel style="nifty-panel-rpg" id="panel" childLayout="vertical" valign="bottom" height="180px" width="450px">
+                <effect>
+                    <onStartScreen name="move" mode="in" direction="top" length="300" startDelay="0" inherit="true"/>
+                    <onEndScreen name="move" mode="out" direction="bottom" length="300" startDelay="0" inherit="true"/>
+                    <onHover name="pulsate" scaleFactor="0.008" startColor="#f600" endColor="#ffff" post="true"/>
+                </effect>
+                
+                <panel  padding="4px,25px,4px,30px" id="panel" height="25px" width="100%" backgroundColor="#f604" childLayout="vertical" visibleToMouse="true">              
+                    <text textHAlign="left" id="name" font="Interface/Fonts/Default.fnt" color="#000f" text="Who" />
+                </panel>
+                
+                <panel id="panel" childLayout="horizontal" height="120px"  padding="4px,8px,4px,8px" >
+                    <panel id="pictureBox" backgroundColor="#f604" width="100px" height="120px" padding="4px,4px,4px,4px" childLayout="center">   
+                        <image id="picture" filename="Interface/portrait/p2.png" width="80px" height="110px"/>   
+                    </panel>
+
+                        
+                    <text id="text" font="Interface/Fonts/WideLatin.fnt" color="#ffff" text="+145" textHAlign="left" textVAlign="top">
+                        <effect>
+                            <onStartScreen  name="textSize" startSize="3.0" endSize="1.0" length="300" startDelay="0" />   
+                        </effect>
+                    </text>
+
+                </panel>
+            </panel>
+        </layer>
+    </screen>
+    <screen id="test" controller="jme3test.animation.DialogeController">
+        <layer  id="layer" childLayout="center" padding="2px,2px,2px,2px">
+            <panel style="nifty-panel-rpg" id="panel" childLayout="vertical" valign="bottom" height="180px" width="450px">
+                <control id="send_button" name="button" label="send" valign="center">
+                    <interact onClick="sendChat()"/>
+                </control>
+            </panel>
+        </layer>
+    </screen>
+</nifty>

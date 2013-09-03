@@ -1,0 +1,25 @@
+
+<nifty-controls>
+    <controlDefinition name="hitLine">
+        <panel id="panel" height="50px" width="180px" backgroundImage="Interface/Images/Ingame/Elements/hit_list_sm_1.png" padding="6px,4px,4px,6px" align="center" valign="center" childLayout="horizontal" visibleToMouse="true">
+            <effect>
+                <onActive name="move" mode="in" direction="left" length="1200" startDelay="800" inherit="true"/>
+                <onEndScreen name="move" mode="out" direction="right" length="300" startDelay="0" inherit="true"/>
+                <onHover name="pulsate" scaleFactor="0.008" startColor="#f600" endColor="#ffff" post="true"/>
+            </effect>
+            <image id="#magic-icon" width="36px" height="36px" filename="Interface/Images/Ingame/Elements/highlight2.png">
+                <effect>
+                    <onActive name="imageOverlay" overlay="true" filename="Interface/Images/Icons/ice-jade-1.png" startDelay="0" alpha="#c" length="400" inherit="true"/>    
+                </effect>
+            </image>
+            <panel width="10px"></panel>
+            <text id="#text" font="Interface/Fonts/VictorianLET.fnt" textSize="2" color="#f22c" text="+117" align="right" valign="center" >
+                <effect>
+                    <onActive  name="textSize" startSize="3.0" endSize="1.0" length="3000" startDelay="400" />      
+                    <onActive name="imageOverlayPulsate" filename="Interface/Images/Ingame/Elements/highlight2.png" startDelay="0" alpha="#9" length="100" inherit="true"/>    
+                </effect>
+            
+            </text>
+        </panel>
+    </controlDefinition>
+</nifty-controls>

@@ -1,0 +1,17 @@
+Material MyMaterial : Common/MatDefs/Misc/Particle.j3md {
+    MaterialParameters {
+        Texture : Textures/MagicFX/sparkle2.png
+        GlowMap : Textures/MagicFX/sparkle2.png
+    }
+    AdditionalRenderState {
+      FaceCull Off
+      Wireframe Off
+      DepthWrite On
+      PolyOffset 0.0 0.0
+      AlphaTestFalloff 0.2
+      Blend AlphaAdditive
+      PointSprite Off
+      ColorWrite On
+      DepthTest On
+    }
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  <!-- start screen -->
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <useStyles filename="nifty-default-styles.xml" />
+    <useControls filename="nifty-default-controls.xml" />
+    <registerSound id="heartbeatSpeedUp" filename="Sounds/heartbeat/Heartbeat speeds up 2.ogg" />
+    <registerSound id="cinematichit" filename="Sounds/cinematic/cinematic hit.ogg" />
+    
+    <screen id="hello_warning" controller="mygame.ui.UIHelloWarningController">    
+        <layer id="layer" childLayout="center">
+            <image align="center" valign="center" filename="Interface/Images/hello/SG_logo_sm1.jpg" >
+                <effect>
+                    <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="1000" startDelay="250"/>
+                </effect>
+            </image>            
+        </layer>
+        <layer id="layer3" childLayout="center">
+            <image height="80%" width="80%" align="center" valign="center" filename="Interface/Images/hello/SG_logo_sm3.png" >
+                <effect>
+                    <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="100" startDelay="100"/>
+                    <onActive name="shake" distance="5.0" global="false" length="24000" startDelay="100"/>
+                    <onStartScreen name="blendMode" blendMode="multiply"/>
+                </effect>
+            </image>
+        </layer>
+        <layer height="80%" width="80%" id="layer4" childLayout="center">
+            <image height="40%" width="40%" align="center" valign="center" filename="Interface/Images/hello/SG_logo_sm4.png" >
+                <effect>
+                    <onActive name="shake" distance="2.0" global="false" length="24000" startDelay="100"/>
+                    <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="1500" startDelay="250"/>
+                </effect>
+            </image>
+        </layer>
+        <layer height="80%" width="80%" id="layer1" childLayout="center">
+            <image height="40%" width="40%" align="center" valign="center" filename="Interface/Images/hello/SG_logo_eyes.png" >
+                <effect>
+                    <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="1000" startDelay="2500"/>
+                </effect>
+            </image>
+        </layer>
+        <layer height="80%" width="80%" id="layer2" childLayout="center">
+            <image align="center" valign="bottom" filename="Interface/Images/hello/SG_logo_sm2.png" >
+                <effect>
+                    <onStartScreen  name="playSound" sound="cinematichit" startDelay="2300"/>
+                    <onStartScreen  name="fade" startColor="#0000" endColor="#000f" length="1500" startDelay="2000"/>
+                    <onStartScreen  name="imageSize" startSize="3.0" endSize="1.0" length="500" startDelay="2000" />   
+                </effect>
+            </image>
+        </layer>
+        <layer id="layerButton" childLayout="vertical">
+            <text id="warning_text" style="nifty-label" font="aurulent-sans-16.fnt" color="#ffff" text="${CALL.getWarningText()}" align="center" valign="center" >
+                <effect>
+                    <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="1500" startDelay="2500"/>
+                </effect>
+            </text>
+            <text style="nifty-label" text=""/>
+            <panel id="warning_panel" height="60px" width="250px" align="center" valign="center" style="nifty-panel" childLayout="horizontal">
+                <control id="quit_button" name="button" label="Quit Game" align="left" valign="center">
+                    <interact onClick="quitGame()"/>
+                    <effect>
+                        <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="1500" startDelay="250"/>
+                    </effect>
+                </control>
+                <control id="start_button" name="button" label="Shut up,I'm in!" align="right" valign="center">
+                    <interact onClick="enterGame()"/>
+                    <effect>
+                        <onStartScreen name="fade" startColor="#0000" endColor="#000f" length="1500" startDelay="250"/>
+                    </effect>
+                </control>         
+            </panel>
+            
+        </layer>
+    </screen>
+</nifty>

@@ -1,0 +1,11 @@
+Material My Material : MatDefs/LUTCC256_Test.j3md {
+     MaterialParameters {
+        CCMap : Shaders/ColorCorrection/LUT_Sepia.png
+        Texture : Interface/Fonts/WideLatin.png
+     }
+    AdditionalRenderState {
+      Blend Color
+      AlphaTestFalloff 0.0
+        FaceCull Off
+    }
+}

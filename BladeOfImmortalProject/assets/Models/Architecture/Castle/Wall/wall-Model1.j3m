@@ -1,0 +1,7 @@
+Material MyMaterial : Common/MatDefs/Light/Lighting.j3md {
+    MaterialParameters {
+        DiffuseMap : Repeat Models/Architecture/Castle/Wall/Material.jpg
+    }
+    AdditionalRenderState {
+    }
+}

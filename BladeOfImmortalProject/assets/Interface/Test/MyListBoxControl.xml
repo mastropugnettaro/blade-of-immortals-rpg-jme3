@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nifty xmlns="http://nifty-gui.sourceforge.net/nifty-1.3.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://nifty-gui.sourceforge.net/nifty-1.3.xsd http://nifty-gui.sourceforge.net/nifty-1.3.xsd">
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+  <!-- start screen -->
+  <!-- +++++++++++++++++++++++++++++++++++++++ -->
+    <useStyles filename="Interface/MyControls/nifty-listbox-style.xml"/>
+    <useControls filename="Interface/MyControls/NewRPGControls.xml" />
+
+    
+
+    <screen id="start" controller="mygame.listbox.TestListBox">
+        <layer id="layer" backgroundColor="#003f" childLayout="center">
+            <panel id="panel" height="100%" width="100%" align="center" valign="center" backgroundColor="#f60f" childLayout="center" visibleToMouse="true">
+                <control id="myCustomListBox" name="MyListBox" vertical="optional" horizontal="off" selection="Disabled" displayItems="8" 
+       viewConverterClass="mygame.listbox.HitListView" height="400px" width="300px">
+                    <control name="hitLine" /> <!-- here we tell Nifty what element to display in each line -->
+                </control>
+
+            </panel>
+        </layer>
+    </screen>
+</nifty>
